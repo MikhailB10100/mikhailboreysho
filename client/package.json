@@ -1,5 +1,5 @@
 {
-  "name": "template_react-webpack-babel",
+  "name": "mikhailboreysho",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MikhailB10100/template_react-webpack-babel.git"
+    "url": "git+https://github.com/MikhailB10100/mikhailboreysho.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Mikhail Boreysho <mikhailboreysho@gmail.com>",
   "license": "ISC",
   "browserslist": "> 0.25%, not dead",
   "bugs": {
-    "url": "https://github.com/MikhailB10100/template_react-webpack-babel/issues"
+    "url": "https://github.com/MikhailB10100/mikhailboreysho/issues"
   },
-  "homepage": "https://github.com/MikhailB10100/template_react-webpack-babel#readme",
+  "homepage": "https://github.com/MikhailB10100/mikhailboreysho#readme",
   "devDependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
