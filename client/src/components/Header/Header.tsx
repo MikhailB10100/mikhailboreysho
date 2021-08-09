@@ -1,8 +1,11 @@
 import React from 'react'
+import NavMenu from '@components/Header/NavMenu'
 
-function Header() {
+function Header() {  
   return (
-    <header>Hi there!</header>
+    <header className='header'>
+      <NavMenu components={['Home', 'About', 'Projects', 'Other']}></NavMenu>
+    </header>
   )
 }
 
