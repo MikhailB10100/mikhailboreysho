@@ -3,12 +3,11 @@ import { NavLink } from 'react-router-dom'
 
 interface NavItemProps {
   component: string,
-  index: number
 }
 
-function NavItem ({component, index}: NavItemProps) {
+function NavItem ({ component }: NavItemProps) {
   return (
-    <NavLink className='navigation-item' key={`navmenu${index}`} to={`/${component.toLowerCase()}`}>
+    <NavLink className='header__n-item' to={`/${component.toLowerCase()}`}>
       <span>
         {component}
       </span>

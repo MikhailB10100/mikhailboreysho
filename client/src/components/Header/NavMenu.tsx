@@ -5,10 +5,10 @@ interface NavMenuProps {
   components: string[]
 }
 
-function NavMenu ({components}: NavMenuProps) {
+function NavMenu ({ components }: NavMenuProps) {
   return (
-    <nav className='navigation'>
-      {components.map((item, index) => <NavItem component={item} index={index} />)}
+    <nav className='header__navigation'>
+      {components.map((item, index) => <NavItem key={`navmenu${index}`} component={item} />)}
     </nav>
   )
 }

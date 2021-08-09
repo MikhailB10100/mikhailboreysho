@@ -24,8 +24,10 @@ function Routing() {
     </Switch>
   )
   return (
-    <div className='content'>
-      {router}
+    <div className='page'>
+      <div className='content page__content'>
+        {router}
+      </div>
     </div>
   )
 }

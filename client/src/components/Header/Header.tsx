@@ -4,7 +4,9 @@ import NavMenu from '@components/Header/NavMenu'
 function Header() {  
   return (
     <header className='header'>
-      <NavMenu components={['Home', 'About', 'Projects', 'Other']}></NavMenu>
+      <div className='content header__content'>
+        <NavMenu components={['Home', 'About', 'Projects', 'Other']}></NavMenu>
+      </div>
     </header>
   )
 }
