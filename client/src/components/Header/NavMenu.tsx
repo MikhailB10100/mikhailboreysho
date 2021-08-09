@@ -1,24 +1,14 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import NavItem from '@components/Header/NavItem'
 
 interface NavMenuProps {
   components: string[]
 }
 
-function createNavLink (component: string, index: number) {
-  return (
-    <NavLink className='navigation-item' key={`navmenu${index}`} to={`/${component.toLowerCase()}`}>
-      <span>
-        {component}
-      </span>
-    </NavLink>
-  )
-}
-
 function NavMenu ({components}: NavMenuProps) {
   return (
     <nav className='navigation'>
-      {components.map((item, index) => createNavLink(item, index))}
+      {components.map((item, index) => <NavItem component={item} index={index} />)}
     </nav>
   )
 }
