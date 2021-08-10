@@ -4,4 +4,10 @@
 @import '@styles/core/_variables';
 @import '@styles/core/_reset';
 
-@import '@styles/pages/_home'
+@import '@styles/components/_App';
+@import '@styles/components/_header';
+@import '@styles/components/_footer';
+
+@import '@styles/pages/_home';
+
+@import '@styles/blocks/_content';

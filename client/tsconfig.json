@@ -24,6 +24,8 @@
       "@/*": ["./*"],
       "@components/*": ["components/*"],
       "@styles/*": ["scss/*"],
+      "@pages/*": ["components/Pages/*"],
+      "@common/*": ["components/common/*"],
     },
   },
   "include": [
