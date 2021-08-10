@@ -1,0 +1,29 @@
+{
+  "name": "mikhailboreysho",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "node ./node_modules/eslint/bin/eslint ./client --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MikhailB10100/mikhailboreysho.git"
+  },
+  "keywords": [],
+  "author": "Mikhail Boreysho <mikhailboreysho@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MikhailB10100/mikhailboreysho/issues"
+  },
+  "homepage": "https://github.com/MikhailB10100/mikhailboreysho#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "prettier": "^2.3.2"
+  }
+}

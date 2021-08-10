@@ -2,15 +2,13 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 interface NavItemProps {
-  component: string,
+  component: string
 }
 
-function NavItem ({ component }: NavItemProps) {
+function NavItem({ component }: NavItemProps) {
   return (
-    <NavLink className='header__n-item' to={`/${component.toLowerCase()}`}>
-      <span>
-        {component}
-      </span>
+    <NavLink className="header__n-item" to={`/${component.toLowerCase()}`}>
+      <span>{component}</span>
     </NavLink>
   )
 }
