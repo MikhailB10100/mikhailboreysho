@@ -37,7 +37,8 @@ module.exports = {
       '@': path.resolve(__dirname, 'src'),
       '@components': path.resolve(__dirname, 'src/components'),
       '@styles': path.resolve(__dirname, 'src/scss'),
-      '@pages': path.resolve(__dirname, 'src/components/pages')
+      '@pages': path.resolve(__dirname, 'src/components/pages'),
+      '@common': path.resolve(__dirname, 'src/components/common')
     }
   },
   devtool: isDev ? 'source-map' : false,

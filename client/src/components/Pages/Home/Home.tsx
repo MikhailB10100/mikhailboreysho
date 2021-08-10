@@ -1,6 +1,6 @@
 import React from 'react'
 
-import CircleDiagram from '@pages/Home/CircleDiagram'
+import LastProject from '@pages/Home/LastProject'
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       </div>
       <div className='home-page__left'>
         <div className='home-page__left_top'>
-          <CircleDiagram />
+          <LastProject />
         </div>
         <div className='home-page__left_bottom'></div>    
       </div>
