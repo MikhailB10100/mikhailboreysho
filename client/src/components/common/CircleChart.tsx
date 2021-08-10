@@ -10,7 +10,15 @@ interface DrawPieceProps {
   color: string
 }
 
-function drawPiece({ ctx, x, y, radius, startAngle, endAngle, color }: DrawPieceProps) {
+function drawPiece({
+  ctx,
+  x,
+  y,
+  radius,
+  startAngle,
+  endAngle,
+  color,
+}: DrawPieceProps) {
   if (ctx) {
     ctx.fillStyle = color
     ctx.beginPath()
@@ -24,11 +32,11 @@ function drawPiece({ ctx, x, y, radius, startAngle, endAngle, color }: DrawPiece
 type languagesDataOptions = {
   language: string
   value: number
-  color: string 
+  color: string
 }
 
 type holeOptions = {
-  size: number,
+  size: number
   color: string
 }
 
@@ -38,21 +46,20 @@ interface PieChartProps {
   canvas: HTMLCanvasElement | null
 }
 
-
-function PieChart({languagesData, hole, canvas}: PieChartProps){
+function PieChart({ languagesData, hole, canvas }: PieChartProps) {
   if (!canvas) return
-  const {width, height} = canvas
+  const { width, height } = canvas
   const ctx = canvas.getContext('2d')
-  const x = width/2
-  const y = height/2
-  const radius = Math.min(x,y)
+  const x = width / 2
+  const y = height / 2
+  const radius = Math.min(x, y)
   const PI = Math.PI
-  const totalValue = languagesData.reduce((acc, cur) => acc += cur.value, 0)
-  const onePointValueAngle = PI * 2 / totalValue //angle by 1 value point
+  const totalValue = languagesData.reduce((acc, cur) => (acc += cur.value), 0)
+  const onePointValueAngle = (PI * 2) / totalValue //angle by 1 value point
 
-  let startAngle: number = 0
-  for (let i = 0; i<languagesData.length; i++) {
-    const {value, color} = languagesData[i]
+  let startAngle = 0
+  for (let i = 0; i < languagesData.length; i++) {
+    const { value, color } = languagesData[i]
     const sliceAngle = onePointValueAngle * value //angle by current language value points
     const endAngle = startAngle + sliceAngle
     const pieceOptions = { ctx, x, y, radius, startAngle, endAngle, color }
@@ -61,26 +68,34 @@ function PieChart({languagesData, hole, canvas}: PieChartProps){
   }
 
   if (hole) {
-    const {size, color} = hole
+    const { size, color } = hole
     const iRadius = size * radius
-    const holeOptions = { ctx, x, y, radius: iRadius, startAngle: 0, endAngle: PI * 2, color }
+    const holeOptions = {
+      ctx,
+      x,
+      y,
+      radius: iRadius,
+      startAngle: 0,
+      endAngle: PI * 2,
+      color,
+    }
     drawPiece(holeOptions)
   }
 }
 
 type canvasOptions = {
-  width: number,
+  width: number
   height: number
 }
 
-interface CircleChartOptions  {
-  languagesData: languagesDataOptions[],
-  hole: holeOptions,
+interface CircleChartOptions {
+  languagesData: languagesDataOptions[]
+  hole: holeOptions
   canvas: canvasOptions
 }
 
 function CircleChart({ languagesData, hole, canvas }: CircleChartOptions) {
-  const {width, height} = canvas
+  const { width, height } = canvas
   const canvasRef = useRef(null)
 
   useEffect(() => {
@@ -88,12 +103,12 @@ function CircleChart({ languagesData, hole, canvas }: CircleChartOptions) {
     const options = {
       languagesData,
       hole,
-      canvas
+      canvas,
     }
 
     PieChart(options)
   }, [])
-  
+
   return <canvas ref={canvasRef} width={width} height={height} />
 }
 
