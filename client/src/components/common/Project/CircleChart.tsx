@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { ChartDataProps, Chart } from '@common/Project/chart_types'
 
 interface DrawPieceProps {
   ctx: CanvasRenderingContext2D | null
@@ -29,26 +30,15 @@ function drawPiece({
   }
 }
 
-type languagesDataOptions = {
-  language: string
-  value: number
-  color: string
-}
-
-type holeOptions = {
-  size: number
-  color: string
-}
-
 interface PieChartProps {
-  languagesData: languagesDataOptions[]
-  hole: holeOptions | null
+  chartData: ChartDataProps
   canvas: HTMLCanvasElement | null
 }
 
-function PieChart({ languagesData, hole, canvas }: PieChartProps) {
+function PieChart({ chartData, canvas }: PieChartProps) {
   if (!canvas) return
-  const { width, height } = canvas
+  const { languagesData, hole, canvasOptions } = chartData
+  const { width, height } = canvasOptions
   const ctx = canvas.getContext('2d')
   const x = width / 2
   const y = height / 2
@@ -83,26 +73,14 @@ function PieChart({ languagesData, hole, canvas }: PieChartProps) {
   }
 }
 
-type canvasOptions = {
-  width: number
-  height: number
-}
-
-interface CircleChartOptions {
-  languagesData: languagesDataOptions[]
-  hole: holeOptions
-  canvas: canvasOptions
-}
-
-function CircleChart({ languagesData, hole, canvas }: CircleChartOptions) {
-  const { width, height } = canvas
+function CircleChart({ chartData }: Chart) {
+  const { width, height } = chartData.canvasOptions
   const canvasRef = useRef(null)
 
   useEffect(() => {
     const canvas: CanvasRenderingContext2D | null = canvasRef.current
     const options = {
-      languagesData,
-      hole,
+      chartData,
       canvas,
     }
 
