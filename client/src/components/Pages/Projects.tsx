@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Projects() {
+function Projects(): JSX.Element {
   return <h1>Projects</h1>
 }
 

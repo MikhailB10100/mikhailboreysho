@@ -5,7 +5,7 @@ interface NavItemProps {
   component: string
 }
 
-function NavItem({ component }: NavItemProps) {
+function NavItem({ component }: NavItemProps): JSX.Element {
   return (
     <NavLink className="header__n-item" to={`/${component.toLowerCase()}`}>
       <span>{component}</span>

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import CircleChart from '@common/Project/CircleChart'
 import ProjectInfo from '@common/Project/ProjectInfo'
 
 const languagesData = [

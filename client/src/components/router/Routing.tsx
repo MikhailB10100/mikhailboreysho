@@ -5,29 +5,26 @@ import About from '@pages/About'
 import Projects from '@pages/Projects'
 import Other from '@pages/Other'
 
-
-function Routing() {
+function Routing(): JSX.Element {
   const router = (
     <Switch>
       <Route exact path={['/', '/home']}>
         <Home />
       </Route>
-      <Route path='/about'>
+      <Route path="/about">
         <About />
       </Route>
-      <Route path='/projects'>
+      <Route path="/projects">
         <Projects />
       </Route>
-      <Route path='/other'>
+      <Route path="/other">
         <Other />
       </Route>
     </Switch>
   )
   return (
-    <div className='page'>
-      <div className='content page__content'>
-        {router}
-      </div>
+    <div className="page">
+      <div className="content page__content">{router}</div>
     </div>
   )
 }

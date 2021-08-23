@@ -1,13 +1,12 @@
-@import '@styles/core/_base';
-@import '@styles/core/_mixins';
-@import '@styles/core/_fonts';
-@import '@styles/core/_variables';
-@import '@styles/core/_reset';
+@import '~@styles/core/_base';
+@import '~@styles/core/_mixins';
+@import '~@styles/core/_fonts';
+@import '~@styles/core/_reset';
 
-@import '@styles/components/_App';
-@import '@styles/components/_header';
-@import '@styles/components/_footer';
+@import '~@styles/components/_App';
+@import '~@styles/components/_header';
+@import '~@styles/components/_footer';
 
-@import '@styles/pages/_home';
+@import '~@styles/pages/_home';
 
-@import '@styles/blocks/_content';
+@import '~@styles/blocks/_content';

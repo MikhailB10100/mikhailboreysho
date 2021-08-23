@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Other() {
+function Other(): JSX.Element {
   return <h1>Other</h1>
 }
 

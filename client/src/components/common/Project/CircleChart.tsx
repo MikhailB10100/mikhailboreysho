@@ -73,7 +73,7 @@ function PieChart({ chartData, canvas }: PieChartProps) {
   }
 }
 
-function CircleChart({ chartData }: Chart) {
+function CircleChart({ chartData }: Chart): JSX.Element {
   const { width, height } = chartData.canvasOptions
   const canvasRef = useRef(null)
 

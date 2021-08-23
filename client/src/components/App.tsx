@@ -3,10 +3,9 @@ import Header from '@components/Header/Header'
 import Footer from '@components/Footer/Footer'
 import Routing from '@components/router/Routing'
 
-
-function App() {
+function App(): JSX.Element {
   return (
-    <div className='app'>
+    <div className="app">
       <Header />
       <Routing />
       <Footer />

@@ -1,7 +1,7 @@
 import React from 'react'
 import NavMenu from '@components/Header/NavMenu'
 
-function Header() {
+function Header(): JSX.Element {
   return (
     <header className="header">
       <div className="content header__content">

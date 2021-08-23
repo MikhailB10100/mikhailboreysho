@@ -1,7 +1,7 @@
 import React from 'react'
 import NavigationLink from '@components/Footer/NavigationLink'
 
-function NavigationMenu() {
+function NavigationMenu(): JSX.Element {
   return (
     <div className="footer__links">
       <NavigationLink
